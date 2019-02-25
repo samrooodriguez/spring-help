@@ -1,25 +1,23 @@
 package com.help;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Controller
 public class UsersCtrl {
 
-    @GetMapping("profiles")
+    @GetMapping("profile")
     @ResponseBody
     public String showProfile(){
         return "profile page placeholder";
     }
 
-    @PostMapping("/profile")
+    @PostMapping("profile")
     @ResponseBody
-    public String getProfileInfo(@RequestAttribute String username){
+    public String getProfileInfo(@RequestParam String username){
         System.out.println("username = " + username);
         return "profile page submission placeholder " + username;
     }
@@ -35,6 +33,7 @@ public class UsersCtrl {
     }
 
     @GetMapping("/forgotPassword")
+    @ResponseBody
     public String forgotPassword(){
         return "forgotPassword page placeholder";
     }
