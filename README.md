@@ -1,5 +1,4 @@
-# Knows bugs to fix:
-
+# Known bugs to fix:
 
 - Index html doesn't show
 - main.css is not being applied
