@@ -28,10 +28,10 @@ public class UsersCtrl {
     @ResponseBody
     public List<String> showListOfUsers(){
         List<String> users = new ArrayList<>();
-        return users;
         users.add("Fer");
         users.add("Ryan");
         users.add("Sophie");
+        return users;
     }
 
     @GetMapping("/forgotPassword")
